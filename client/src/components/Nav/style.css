@@ -1,0 +1,35 @@
+nav {
+    border-top: solid 1px #000000;
+    border-bottom: solid 1px #000000;
+}
+
+#myNav {
+    box-shadow: 0 0 0 0;
+    color: #000000;
+    float: none;
+}
+
+.navItem {
+    display: inline-block;
+    margin: auto;
+    text-align: center;
+}
+
+#nav1 {
+    text-align: left;
+    float: none;
+}
+
+#nav2 {
+    text-align: center;
+    float: none;
+}
+
+#nav3 {
+    text-align: right;
+    float: none;
+}
+
+ul {
+    float: none;
+}
