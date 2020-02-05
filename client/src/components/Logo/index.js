@@ -5,7 +5,7 @@ import './style.css'
 function Logo(props) {
     return (
         <div>
-            <img src={logo} alt='Arcane and Iron logo'></img>
+            <img className='mainLogo' src={logo} alt='Arcane and Iron logo'></img>
         </div>
     )
 }
