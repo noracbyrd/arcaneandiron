@@ -13,23 +13,28 @@ nav {
     display: inline-block;
     margin: auto;
     text-align: center;
+    color: black;
 }
 
 #nav1 {
     text-align: left;
     float: none;
+    color: black;
 }
 
 #nav2 {
     text-align: center;
     float: none;
+    color: black;
 }
 
 #nav3 {
     text-align: right;
     float: none;
+    color: black;
 }
 
-ul {
+nav ul a{
     float: none;
+    color: black;
 }
