@@ -33,7 +33,8 @@ body {
   position: relative;
   min-height: 100vh;
   flex-direction: column;
-  background-image: url('./images/PostcardBWfade.png')
+  background-image: url('./images/PostcardBWfade.png');
+  overflow: visible;
 }
 
 main {

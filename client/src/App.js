@@ -4,6 +4,7 @@ import Footer from './components/Footer'
 import Nav from './components/Nav'
 import About from './components/About'
 import Events from './components/Events'
+import Playtest from './components/Playtest'
 import MailingList from './components/MailingList'
 import './App.css';
 
@@ -33,6 +34,15 @@ function App() {
             <Events />
           </div>
         </div>
+        <div className='row'>
+          <div className='col s12'>
+            <Playtest />
+          </div>
+        </div>
+        <div className='row'></div>
+        <div className='row'></div>
+        <div className='row'></div>
+        <div className='row'></div>
       </div>
       <Footer />
     </div>
