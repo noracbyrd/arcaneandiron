@@ -1,0 +1,2 @@
+CREATE DATABASE arcane_iron_user_db;
+USE arcane_iron_user_db;
