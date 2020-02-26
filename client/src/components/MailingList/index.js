@@ -9,7 +9,7 @@ class MailingList extends Component {
             <div>
                 <div className='row'></div>
                 <div className='row'></div>
-                <a class="waves-effect waves-light btn-large grey darken-2">JOIN OUR MAILING LIST</a>
+                <a class="waves-effect waves-light btn-large grey darken-2" onClick={this.handleSubmit}>JOIN OUR MAILING LIST</a>
             </div>
         )
     }
