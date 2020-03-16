@@ -17,7 +17,8 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false,
             //validate that it is an email
-            isEmail: true
+            isEmail: true,
+            unique: true
         }
     });
     return User;

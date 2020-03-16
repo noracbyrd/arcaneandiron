@@ -9,7 +9,7 @@ class Nav extends Component {
                 <div className='container'>
                     <div className='row'>
                         <ul>
-                            <div className='col s4'>
+                            <div className='col s3'>
                                 <li className='navItem' id='nav1'>
                                     <Link
                                         // activeClass="active"
@@ -22,7 +22,7 @@ class Nav extends Component {
                                         Upcoming Events</Link>
                                 </li>
                             </div>
-                            <div className='col s4'>
+                            <div className='col s3'>
                                 <div className='row'>
                                     <div className='col s4 offset-s4'>
                                         <li className='navItem' id='nav2'>
@@ -39,7 +39,7 @@ class Nav extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className='col s4'>
+                            <div className='col s3'>
                                 <li className='navItem' id='nav3'>
                                 <Link
                                         // activeClass="active"
@@ -50,6 +50,18 @@ class Nav extends Component {
                                         duration={500}
                                     >
                                         Playtest</Link></li>
+                            </div>
+                            <div className='col s3'>
+                                <li className='navItem' id='nav4'>
+                                <Link
+                                        // activeClass="active"
+                                        to="contact"
+                                        spy={true}
+                                        smooth={true}
+                                        offset={-70}
+                                        duration={500}
+                                    >
+                                        Contact</Link></li>
                             </div>
                         </ul>
                     </div>

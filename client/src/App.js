@@ -6,6 +6,7 @@ import About from './components/About'
 import Events from './components/Events'
 import Playtest from './components/Playtest'
 import MailingList from './components/MailingList'
+import Contact from './components/Contact'
 import './App.css';
 
 function App() {
@@ -37,6 +38,11 @@ function App() {
         <div className='row'>
           <div className='col s12'>
             <Playtest />
+          </div>
+        </div>
+        <div className='row'>
+          <div className='col s12'>
+            <Contact />
           </div>
         </div>
         <div className='row'></div>

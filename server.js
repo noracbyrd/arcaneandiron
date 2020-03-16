@@ -6,6 +6,7 @@ const path = require('path');
 const morgan = require('morgan');
 const bodyParser = require('body-parser')
 const db = require('./models')
+const api = require('./routes/api')
 
 // middleware
 app.use(morgan('tiny'))
@@ -24,7 +25,7 @@ if (process.env.NODE_ENV === 'production') {
 
 // rewrite
 app.use(express.static('client/build'))
-
+app.use('/api', api);
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
 });

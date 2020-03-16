@@ -14,32 +14,29 @@ class MailingList extends Component {
     handleInputChange = e => {
         const { name, value } = e.target;
         this.setState({
-            [name]: value, })
+            [name]: value,
+        })
     }
     handleFormSubmit = e => {
         e.preventDefault()
-        const newUser = {
+        let newUser = {
             first_name: this.state.firstname,
             last_name: this.state.lastname,
             email: this.state.email
         }
-        console.log(newUser)
-        // API.newUser(newUser)
-        // .then(response => {
-        //     console.log(response)
-        //     if (!response.data.errmsg) {
-        //         console.log('successful signup')
-        //         this.setState({ //redirect to login page
-        //             toSignin: true
-        //         })
-        //     } else {
-        //         console.log('username already taken')
-        //     }
-        // }).catch(error => {
-        //     console.log('signup error: ')
-        //     console.log(error)
-
-        // })
+        API.newUser(newUser)
+            .then(response => {
+                console.log(response)
+                if (!response.data.errmsg) {
+                    console.log('user added')
+                } else if (!response) {
+                    console.log('something is wrong')
+                } else {
+                    console.log('already signed up')
+                }
+            }).catch(error => {
+                console.log(error)
+            })
         this.setState({
             firstname: '',
             lastname: '',
@@ -70,7 +67,7 @@ class MailingList extends Component {
                                 <div className="row">
                                     <div className="input-field col s12">
                                         <input name="email" value={this.state.email} id="email" type="email" className="validate" onChange={this.handleInputChange}></input>
-                                        <label htmlFor="email">Email</label>
+                                        <label htmlFor="email"><span className='data-error="Please enter a valid email address."'>Email</span></label>
                                     </div>
                                 </div>
                                 <div>
@@ -81,6 +78,7 @@ class MailingList extends Component {
                     </div>
 
                 </div>
+                
             </div>
         )
     }
