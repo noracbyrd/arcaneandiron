@@ -72,7 +72,7 @@ class Nav extends Component {
                     </div>
                 </nav>
                 <ul className='sidenav' id='mobile-demo'>
-                    <li className='navItem' id='nav1'>
+                    <li id='nav1mobile'>
                         <Link
                             // activeClass="active"
                             to="events"
@@ -83,7 +83,7 @@ class Nav extends Component {
                         >
                             Upcoming Events</Link>
                     </li>
-                    <li className='navItem' id='nav2'>
+                    <li id='nav2mobile'>
                         <Link
                             // activeClass="active"
                             to="about"
@@ -94,7 +94,7 @@ class Nav extends Component {
                         >
                             About</Link>
                     </li>
-                    <li className='navItem' id='nav3'>
+                    <li id='nav3mobile'>
                         <Link
                             // activeClass="active"
                             to="playtest"
@@ -104,7 +104,7 @@ class Nav extends Component {
                             duration={500}
                         >
                             Playtest</Link></li>
-                    <li className='navItem' id='nav4'>
+                    <li id='nav4mobile'>
                         <Link
                             // activeClass="active"
                             to="contact"
