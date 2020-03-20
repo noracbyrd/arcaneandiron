@@ -9,7 +9,7 @@ class Nav extends Component {
                 <nav className='transparent' id='myNav'>
                     <div className='nav-wrapper'>
                         <div className='container'>
-                            <a href='#' data-target='mobile-demo' className='sidenav-trigger'><i className='material-icons'>Menu</i></a>
+                            <a href='#' data-target='mobile-demo' className='sidenav-trigger'><i className='material-icons'>menu</i></a>
                             <div className='row'>
                                 <ul className='center hide-on-med-and-down'>
                                     <div className='col s3'>
