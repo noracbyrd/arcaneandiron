@@ -38,3 +38,9 @@ nav ul a{
     float: none;
     color: black;
 }
+
+.navMobile{
+    font-family: 'Macondo Swash Caps', cursive;
+    font-size: 2em;
+    font-weight: bold;
+}
