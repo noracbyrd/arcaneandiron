@@ -6,7 +6,8 @@ const path = require('path');
 const morgan = require('morgan');
 const bodyParser = require('body-parser')
 const db = require('./models')
-const api = require('./routes/api')
+// const api = require('./routes/api')
+const routes = require("./routes");
 
 // middleware
 app.use(morgan('tiny'))
@@ -23,17 +24,18 @@ if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));
 }
 
+app.use(routes)
 // rewrite
-app.use(express.static('client/build'))
-app.use('/api', api);
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
-});
+// app.use(express.static('client/build'))
+// app.use('/api', api);
+// app.get('*', (req, res) => {
+//     res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+// });
 
-db.sequelize.sync().then(function () {
+// db.sequelize.sync().then(function () {
     app.listen(PORT, function () {
         // Log (server-side) when our server has started
         console.log('Server listening on: http://localhost:' + PORT);
     });
-});
+    
 
