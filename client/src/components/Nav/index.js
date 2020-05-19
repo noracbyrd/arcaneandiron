@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link, animateScroll } from "react-scroll";
 import './style.css'
+import Social from '../Social'
 
 class Nav extends Component {
     render() {
@@ -67,6 +68,7 @@ class Nav extends Component {
                                                 Contact</Link></li>
                                     </div>
                                 </ul>
+                                <Social socialLoc='mobileNav'></Social>
                             </div>
                         </div>
                     </div>
