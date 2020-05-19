@@ -6,7 +6,6 @@ const path = require('path');
 const morgan = require('morgan');
 const bodyParser = require('body-parser')
 const db = require('./models')
-// const api = require('./routes/api')
 const routes = require("./routes");
 
 // middleware
@@ -32,10 +31,10 @@ app.use(routes)
 //     res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
 // });
 
-// db.sequelize.sync().then(function () {
+db.sequelize.sync().then(function () {
     app.listen(PORT, function () {
         // Log (server-side) when our server has started
         console.log('Server listening on: http://localhost:' + PORT);
-    });
-    
+    })
+})
 
