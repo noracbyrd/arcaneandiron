@@ -11,14 +11,17 @@ module.exports = function (sequelize, DataTypes) {
         last_name: {
             type: DataTypes.STRING,
             // validate that we are using letters, including hyphens
-            is: /^[A-Za-z\-]+$/i
+            validate: {
+                is: /^[A-Za-z\-]+$/i
+            }
         },
         email: {
             type: DataTypes.STRING,
+            validate: {
+                isEmail: true,
+                unique: true
+            },
             allowNull: false,
-            //validate that it is an email
-            isEmail: true,
-            unique: true
         }
     });
     return User;
