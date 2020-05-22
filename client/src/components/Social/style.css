@@ -4,4 +4,14 @@
   }
 .mobileNav{
     float: right;
+    padding-top: 5px;
+}
+
+@media screen and (max-width: 640px){
+  .mobileNav{
+    padding-top: 5px;
+  }
+  .socialLogo{
+    height: 45px;
+  }
 }

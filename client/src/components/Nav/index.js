@@ -26,9 +26,9 @@ class Nav extends Component {
                                                 Upcoming Events</Link>
                                         </li>
                                     </div>
-                                    <div className='col s3'>
+                                    <div className='col s2'>
                                         <div className='row'>
-                                            <div className='col s4 offset-s4'>
+                                            <div className='col s4'>
                                                 <li className='navItem' id='nav2'>
                                                     <Link
                                                         // activeClass="active"
@@ -43,7 +43,7 @@ class Nav extends Component {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className='col s3'>
+                                    <div className='col s2'>
                                         <li className='navItem' id='nav3'>
                                             <Link
                                                 // activeClass="active"
@@ -55,7 +55,7 @@ class Nav extends Component {
                                             >
                                                 Playtest</Link></li>
                                     </div>
-                                    <div className='col s3'>
+                                    <div className='col s2'>
                                         <li className='navItem' id='nav4'>
                                             <Link
                                                 // activeClass="active"

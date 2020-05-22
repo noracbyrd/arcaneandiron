@@ -10,7 +10,7 @@ nav {
 }
 
 .navItem {
-    display: inline-block;
+    /* display: inline-block; */
     margin: auto;
     text-align: center;
     color: black;
@@ -23,19 +23,19 @@ nav {
 }
 
 #nav2 {
-    text-align: center;
+    text-align: left;
     float: none;
     color: black;
 }
 
 #nav3 {
-    text-align: right;
+    text-align: left;
     float: none;
     color: black;
 }
 
 nav ul a{
-    float: none;
+    float: left;
     color: black;
 }
 
