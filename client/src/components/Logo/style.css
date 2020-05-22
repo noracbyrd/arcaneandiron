@@ -2,3 +2,10 @@
     width: 50%;
     padding-top: 10px;
 }
+
+@media screen and (max-width: 640px){
+    .mainLogo{
+        width: 75%;
+        padding-bottom: 5px;
+    }
+}
