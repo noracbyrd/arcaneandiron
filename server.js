@@ -13,7 +13,7 @@ app.use(morgan('tiny'))
 
 app.use(
     bodyParser.urlencoded({
-        extended: false
+        extended: true
     })
 )
 app.use(bodyParser.json())
@@ -23,6 +23,7 @@ if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));
 }
 
+app.use(express.static('views'))
 app.use(routes)
 // rewrite
 // app.use(express.static('client/build'))
