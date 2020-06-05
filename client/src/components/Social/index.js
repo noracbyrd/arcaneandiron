@@ -7,9 +7,9 @@ import instagram from '../../images/social/instagram_black.png'
 function Social(props){
     return(
         <div className={props.socialLoc}>
-            <a href='https://twitter.com/ArcaneandIron' target="_blank"><img className='socialLogo' src={twitter} alt='twitter logo'></img></a>
-            <a href='https://www.facebook.com/ArcaneandIron/' target="_blank"><img className='socialLogo' src={facebook} alt='facebook logo'></img></a>
-            <a href='https://www.instagram.com/arcaneandiron/' target="_blank"><img className='socialLogo' src={instagram} alt='instagram logo'></img></a>
+            <a href='https://twitter.com/ArcaneandIron' target="_blank" rel="noopener noreferrer"><img className='socialLogo' src={twitter} alt='twitter logo'></img></a>
+            <a href='https://www.facebook.com/ArcaneandIron/' target="_blank" rel="noopener noreferrer"><img className='socialLogo' src={facebook} alt='facebook logo'></img></a>
+            <a href='https://www.instagram.com/arcaneandiron/' target="_blank" rel="noopener noreferrer"><img className='socialLogo' src={instagram} alt='instagram logo'></img></a>
       </div>
     )
 }
