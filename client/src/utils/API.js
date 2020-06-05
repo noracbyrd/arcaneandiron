@@ -1,8 +1,8 @@
 import axios from 'axios'
 
 export default {
-    // user routing
-    newUser: function (user) {
-        return axios.post('/api/users', user);
+    // Email routing
+    newEmail: function (Email) {
+        return axios.post('/api/Emails', Email);
     }
 }
