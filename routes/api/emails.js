@@ -1,15 +1,15 @@
 const router = require('express').Router();
-const usersController = require('../../controllers/usersController');
+const emailsController = require('../../controllers/emailsController');
 
-// /api/users/
+// /api/emails/
 router.route('/')
-  .get(usersController.findAll)
-  .post(usersController.create)
+  .get(emailsController.findAll)
+  .post(emailsController.create)
   
-// /api/users/:id
+// /api/emails/:id
 // router.route('/:id')
-//   .get(usersController.findById)
-  // .put(usersController.update)
-  // .delete(usersController.remove);
+//   .get(emailsController.findById)
+  // .put(emailsController.update)
+  // .delete(emailsController.remove);
 
 module.exports = router;
