@@ -2,7 +2,7 @@
     "development": {
       "username": "root",
       "password": "root",
-      "database": "arcane_iron_user_db",
+      "database": "arcane_iron_email_db",
       "host": "127.0.0.1",
       "dialect": "mysql",
       "operatorsAliases": "sequelize"
