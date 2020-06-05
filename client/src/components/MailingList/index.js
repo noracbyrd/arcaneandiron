@@ -19,15 +19,15 @@ class MailingList extends Component {
     handleFormSubmit = e => {
         e.preventDefault()
         console.log('submit button clicked')
-        let newUser = {
+        let newEmail = {
             email: this.state.email
         }
-        console.log(newUser)
-        API.newUser(newUser)
+        console.log(newEmail)
+        API.newEmail(newEmail)
             .then(response => {
                 console.log(response)
                 if (!response.data.errmsg) {
-                    console.log('user added')
+                    console.log('Email added')
                 } else if (!response) {
                     console.log('something is wrong')
                 } else {
