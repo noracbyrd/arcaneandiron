@@ -1,2 +1,2 @@
-CREATE DATABASE arcane_iron_user_db;
-USE arcane_iron_user_db;
+CREATE DATABASE arcane_iron_email_db;
+USE arcane_iron_email_db;
