@@ -8,8 +8,6 @@ class MailingList extends Component {
         M.AutoInit();
     }
     state = {
-        firstname: '',
-        lastname: '',
         email: ''
     }
     handleInputChange = e => {
@@ -22,8 +20,6 @@ class MailingList extends Component {
         e.preventDefault()
         console.log('submit button clicked')
         let newUser = {
-            first_name: this.state.firstname,
-            last_name: this.state.lastname,
             email: this.state.email
         }
         console.log(newUser)
@@ -41,8 +37,6 @@ class MailingList extends Component {
                 console.log(error)
             })
         this.setState({
-            firstname: '',
-            lastname: '',
             email: ''
         })
     }
@@ -57,16 +51,6 @@ class MailingList extends Component {
                         <h6>Sign up for our mailing list to get the latest Arcane & Iron news!</h6>
                         <div className='row'>
                             <form className='col s12'>
-                                <div className='row'>
-                                    <div className='input-field col s6'>
-                                        <input name='firstname' value={this.state.firstname} id='first_name' type='text' className='validate' onChange={this.handleInputChange}></input>
-                                        <label htmlFor='first_name'>First Name</label>
-                                    </div>
-                                    <div className='input-field col s6'>
-                                        <input name='lastname' value={this.state.lastname} id='last_name' type='text' className='validate' onChange={this.handleInputChange}></input>
-                                        <label htmlFor='last_name'>Last Name</label>
-                                    </div>
-                                </div>
                                 <div className="row">
                                     <div className="input-field col s12">
                                         <input name="email" value={this.state.email} id="email" type="email" className="validate" onChange={this.handleInputChange}></input>
