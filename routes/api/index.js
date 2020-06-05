@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const userRoutes = require('./users.js');
+const emailRoutes = require('./emails.js');
 
-router.use('/users', userRoutes);
+router.use('/emails', emailRoutes);
 
 module.exports = router;
