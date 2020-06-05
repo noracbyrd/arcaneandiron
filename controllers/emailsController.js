@@ -18,7 +18,9 @@ module.exports = {
         console.log('controller is hit')
         console.log(req.body)
         db.Email.create(req.body)
-        .then(dbModel => res.json(dbModel))
+        .then(dbModel => {
+            console.log('going to database')
+            res.json(dbModel)})
         .catch(err => res.status(422).json(err));
     }
 

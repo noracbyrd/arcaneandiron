@@ -18,7 +18,6 @@ class MailingList extends Component {
     }
     handleFormSubmit = e => {
         e.preventDefault()
-        console.log('submit button clicked')
         let newEmail = {
             email: this.state.email
         }
