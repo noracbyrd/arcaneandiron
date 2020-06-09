@@ -5,20 +5,27 @@ module.exports = {
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
-    findById: function (req, res) {
-        db.Email.findAll({
-            where: {
-              id: req.params.id
-            }
-          })
-            .then(dbModel => res.json(dbModel))
-            .catch(err => res.status(422).json(err));
-    },
     create: function (req, res) {
         console.log('controller is hit')
         console.log(req.body)
-        db.Email.create(req.body)
-        .then(dbModel => res.json(dbModel))
+        db.Email.findAll({
+            where: {
+                email: req.body.email
+            }
+        })
+        .then(dbModel => {
+            if (dbModel[0] === undefined) {
+                db.Email.create(req.body)
+                .then(dbModel => res.json(dbModel))
+                .catch(err => {
+                    res.status(422).json(err)
+                    console.log(err)}
+                    );
+            }
+            else {
+                console.log('you need to tell the user they are already subscribed')
+            }
+        })
         .catch(err => {
             res.status(422).json(err)
             console.log(err)}
