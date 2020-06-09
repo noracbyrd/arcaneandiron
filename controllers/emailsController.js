@@ -1,4 +1,4 @@
-const db = require("../models");
+const db = require('../models');
 module.exports = {
     findAll: function (req, res) {
         db.Email.findAll({})
@@ -18,10 +18,11 @@ module.exports = {
         console.log('controller is hit')
         console.log(req.body)
         db.Email.create(req.body)
-        .then(dbModel => {
-            console.log('going to database')
-            res.json(dbModel)})
-        .catch(err => res.status(422).json(err));
+        .then(dbModel => res.json(dbModel))
+        .catch(err => {
+            res.status(422).json(err)
+            console.log(err)}
+            );
     }
 
 
