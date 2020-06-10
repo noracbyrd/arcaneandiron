@@ -6,8 +6,6 @@ module.exports = {
             .catch(err => res.status(422).json(err));
     },
     create: function (req, res) {
-        console.log('controller is hit')
-        console.log(req.body)
         db.Email.findAll({
             where: {
                 email: req.body.email

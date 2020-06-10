@@ -21,10 +21,8 @@ class MailingList extends Component {
         let newEmail = {
             email: this.state.email
         }
-        console.log(newEmail)
         API.newEmail(newEmail)
             .then(response => {
-                console.log(response)
                 if (!response.data.errmsg) {
                     console.log('Email added')
                 } else if (!response) {
