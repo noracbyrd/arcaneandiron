@@ -50,14 +50,14 @@ class MailingList extends Component {
                         <h6>Sign up for our mailing list to get the latest Arcane & Iron news!</h6>
                         <div className='row'>
                             <form className='col s12'>
-                                <div className="row">
-                                    <div className="input-field col s12">
-                                        <input name="email" value={this.state.email} id="email" type="email" className="validate" onChange={this.handleInputChange}></input>
-                                        <label htmlFor="email"><span className='data-error="Please enter a valid email address."'>Email</span></label>
+                                <div className='row'>
+                                    <div className='input-field col s12'>
+                                        <input name='email' value={this.state.email} id='email' type='email' className='validate' onChange={this.handleInputChange}></input>
+                                        <label htmlFor='email'><span className='data-error="Please enter a valid email address."'>Email</span></label>
                                     </div>
                                 </div>
                                 <div>
-                                    <a className="modal-close waves-effect waves-green btn-flat" onClick={this.handleFormSubmit}>Submit</a>
+                                    <a className='modal-close waves-effect waves-green btn-flat' onClick={this.handleFormSubmit}>Submit</a>
                                 </div>
                             </form>
                         </div>
