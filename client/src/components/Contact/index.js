@@ -25,17 +25,18 @@ class Contact extends Component {
                     <form className="col s12">
                         <div className="row">
                             <div className="input-field col s6">
-                                <input id="first_name" type="text" className="validate"></input>
+                                <input name="firstName"
+                                value={this.state.firstName} id="first_name" type="text" className="validate"></input>
                                 <label htmlFor="first_name">First Name</label>
                             </div>
                             <div className="input-field col s6">
-                                <input id="last_name" type="text" className="validate"></input>
+                                <input name='lastName' value={this.state.lastName}id="last_name" type="text" className="validate"></input>
                                 <label htmlFor="last_name">Last Name</label>
                             </div>
                         </div>
                         <div className="row">
                             <div className="input-field col s12">
-                                <input id="email" type="email" className="validate"></input>
+                                <input name='email' value={this.state.email} id="email" type="email" className="validate"></input>
                                 <label htmlFor="email">Email</label>
                             </div>
                         </div>
@@ -43,14 +44,14 @@ class Contact extends Component {
                             <div className="col s12">
                                 <div className="row">
                                     <div className="input-field col s12">
-                                        <textarea id="textarea1" className="materialize-textarea"></textarea>
+                                        <textarea name='text' value={this.state.text} id="textarea1" className="materialize-textarea"></textarea>
                                         <label htmlFor="textarea1">Textarea</label>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div> 
-                        <button class="btn grey lighten-1 waves-effect waves-light" type="submit" name="action">Submit
+                        <button class="btn grey lighten-1 waves-effect waves-light" type="submit" name="action" onClick={this.handleFormSubmit}>Submit
   </button>
                         </div>
                     </form>
