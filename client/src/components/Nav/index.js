@@ -16,7 +16,7 @@ class Nav extends Component {
                                     <div className='col s3'>
                                         <li className='navItem' id='nav1'>
                                             <Link
-                                                // activeClass="active"
+                                                activeClass="active"
                                                 to="events"
                                                 spy={true}
                                                 smooth={true}
@@ -31,7 +31,7 @@ class Nav extends Component {
                                             <div className='col s4'>
                                                 <li className='navItem' id='nav2'>
                                                     <Link
-                                                        // activeClass="active"
+                                                        activeClass="active"
                                                         to="about"
                                                         spy={true}
                                                         smooth={true}
@@ -46,7 +46,7 @@ class Nav extends Component {
                                     <div className='col s2'>
                                         <li className='navItem' id='nav3'>
                                             <Link
-                                                // activeClass="active"
+                                                activeClass="active"
                                                 to="playtest"
                                                 spy={true}
                                                 smooth={true}
@@ -58,7 +58,7 @@ class Nav extends Component {
                                     <div className='col s2'>
                                         <li className='navItem' id='nav4'>
                                             <Link
-                                                // activeClass="active"
+                                                activeClass="active"
                                                 to="contact"
                                                 spy={true}
                                                 smooth={true}
@@ -76,7 +76,7 @@ class Nav extends Component {
                 <ul className='sidenav' id='mobile-demo'>
                     <li className='navMobile'>
                         <Link
-                            // activeClass="active"
+                            activeClass="active"
                             to="events"
                             spy={true}
                             smooth={true}
@@ -87,7 +87,7 @@ class Nav extends Component {
                     </li>
                     <li className='navMobile'>
                         <Link
-                            // activeClass="active"
+                            activeClass="active"
                             to="about"
                             spy={true}
                             smooth={true}
@@ -98,7 +98,7 @@ class Nav extends Component {
                     </li>
                     <li className='navMobile'>
                         <Link
-                            // activeClass="active"
+                            activeClass="active"
                             to="playtest"
                             spy={true}
                             smooth={true}
@@ -108,7 +108,7 @@ class Nav extends Component {
                             Playtest</Link></li>
                     <li className='navMobile'>
                         <Link
-                            // activeClass="active"
+                            activeClass="active"
                             to="contact"
                             spy={true}
                             smooth={true}

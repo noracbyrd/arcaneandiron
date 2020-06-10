@@ -11,17 +11,17 @@ class Contact extends Component {
                         <div className="row">
                             <div className="input-field col s6">
                                 <input placeholder="Placeholder" id="first_name" type="text" className="validate"></input>
-                                <label for="first_name">First Name</label>
+                                <label htmlFor="first_name">First Name</label>
                             </div>
                             <div className="input-field col s6">
                                 <input id="last_name" type="text" className="validate"></input>
-                                <label for="last_name">Last Name</label>
+                                <label htmlFor="last_name">Last Name</label>
                             </div>
                         </div>
                         <div className="row">
                             <div className="input-field col s12">
                                 <input id="email" type="email" className="validate"></input>
-                                <label for="email">Email</label>
+                                <label htmlFor="email">Email</label>
                             </div>
                         </div>
                         <div className="row">
