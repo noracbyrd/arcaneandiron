@@ -49,6 +49,10 @@ class Contact extends Component {
                                 </div>
                             </div>
                         </div>
+                        <div> 
+                        <button class="btn grey lighten-1 waves-effect waves-light" type="submit" name="action">Submit
+  </button>
+                        </div>
                     </form>
                 </div>
             </div>
