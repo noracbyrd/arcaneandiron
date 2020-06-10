@@ -2,6 +2,21 @@ import React, { Component } from 'react'
 import './style.css'
 
 class Contact extends Component {
+    state = {
+        firstName: '',
+        lastName: '',
+        email: '',
+        text: ''
+    }
+    handleInputChange = e => {
+        const { name, value } = e.target;
+        this.setState({
+            [name]: value,
+        })
+    }
+    handleFormSubmit = e => {
+        e.preventDefault()
+    }
     render() {
         return (
             <div id='contact'>
@@ -10,7 +25,7 @@ class Contact extends Component {
                     <form className="col s12">
                         <div className="row">
                             <div className="input-field col s6">
-                                <input placeholder="Placeholder" id="first_name" type="text" className="validate"></input>
+                                <input id="first_name" type="text" className="validate"></input>
                                 <label htmlFor="first_name">First Name</label>
                             </div>
                             <div className="input-field col s6">
@@ -25,14 +40,14 @@ class Contact extends Component {
                             </div>
                         </div>
                         <div className="row">
-                            <form className="col s12">
+                            <div className="col s12">
                                 <div className="row">
                                     <div className="input-field col s12">
                                         <textarea id="textarea1" className="materialize-textarea"></textarea>
-                                        <label for="textarea1">Textarea</label>
+                                        <label htmlFor="textarea1">Textarea</label>
                                     </div>
                                 </div>
-                            </form>
+                            </div>
                         </div>
                     </form>
                 </div>
