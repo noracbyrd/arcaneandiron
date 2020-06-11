@@ -4,9 +4,10 @@ const app = express();
 const PORT = process.env.PORT || 8022;
 const path = require('path');
 const morgan = require('morgan');
-const bodyParser = require('body-parser')
-const db = require('./models')
-const routes = require("./routes");
+const bodyParser = require('body-parser');
+const db = require('./models');
+const routes = require('./routes');
+const cors = require('cors');
 
 // middleware
 app.use(morgan('tiny'))
@@ -17,6 +18,8 @@ app.use(
     })
 )
 app.use(bodyParser.json())
+
+app.use(cors());
 
 // can i combine below if statement with the above trust proxy one?
 if (process.env.NODE_ENV === 'production') {
