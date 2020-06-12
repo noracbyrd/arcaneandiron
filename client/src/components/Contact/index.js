@@ -43,14 +43,14 @@ class Contact extends Component {
                     <form className='col s12'>
                         <div className='row'>
                             <div className='input-field col s6'>
-                                <input name='firstName'
-                                value={this.state.name} id='name' type='text' className='validate'></input>
+                                <input name='name'
+                                value={this.state.name} id='name' type='text' className='validate' onChange={this.handleInputChange}></input>
                                 <label htmlFor='name'>Name</label>
                             </div>
                         </div>
                         <div className='row'>
                             <div className='input-field col s12'>
-                                <input name='email' value={this.state.email} id='email' type='email' className='validate'></input>
+                                <input name='email' value={this.state.email} id='email' type='email' className='validate' onChange={this.handleInputChange}></input>
                                 <label htmlFor='email'>Email</label>
                             </div>
                         </div>
@@ -58,7 +58,7 @@ class Contact extends Component {
                             <div className='col s12'>
                                 <div className='row'>
                                     <div className='input-field col s12'>
-                                        <textarea name='content' value={this.state.content} id='textarea1' className='materialize-textarea'></textarea>
+                                        <textarea name='content' value={this.state.content} id='textarea1' className='materialize-textarea' onChange={this.handleInputChange}></textarea>
                                         <label htmlFor='textarea1'>Textarea</label>
                                     </div>
                                 </div>
