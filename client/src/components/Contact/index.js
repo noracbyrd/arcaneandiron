@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './style.css'
+import API from '../../utils/API.js'
 
 class Contact extends Component {
     state = {
@@ -15,6 +16,24 @@ class Contact extends Component {
     }
     handleFormSubmit = e => {
         e.preventDefault()
+        let newContactUs = {
+            name: this.state.name,
+            email: this.state.email,
+            content: this.state.content
+        }
+        API.contact(newContactUs)
+        .then(response  => {
+            if (!response.data.errmsg) {
+                console.log('contact message sent')
+            } 
+        }).catch (error => {
+            console.log(error)
+        })
+        this.setState({
+            name: '',
+            email: '',
+            content: ''
+        })
     }
     render() {
         return (
