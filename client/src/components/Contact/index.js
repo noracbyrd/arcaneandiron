@@ -3,10 +3,9 @@ import './style.css'
 
 class Contact extends Component {
     state = {
-        firstName: '',
-        lastName: '',
+        name: '',
         email: '',
-        text: ''
+        content: ''
     }
     handleInputChange = e => {
         const { name, value } = e.target;
@@ -26,12 +25,8 @@ class Contact extends Component {
                         <div className='row'>
                             <div className='input-field col s6'>
                                 <input name='firstName'
-                                value={this.state.firstName} id='first_name' type='text' className='validate'></input>
-                                <label htmlFor='first_name'>First Name</label>
-                            </div>
-                            <div className='input-field col s6'>
-                                <input name='lastName' value={this.state.lastName}id='last_name' type='text' className='validate'></input>
-                                <label htmlFor='last_name'>Last Name</label>
+                                value={this.state.name} id='name' type='text' className='validate'></input>
+                                <label htmlFor='name'>Name</label>
                             </div>
                         </div>
                         <div className='row'>
@@ -44,7 +39,7 @@ class Contact extends Component {
                             <div className='col s12'>
                                 <div className='row'>
                                     <div className='input-field col s12'>
-                                        <textarea name='text' value={this.state.text} id='textarea1' className='materialize-textarea'></textarea>
+                                        <textarea name='content' value={this.state.content} id='textarea1' className='materialize-textarea'></textarea>
                                         <label htmlFor='textarea1'>Textarea</label>
                                     </div>
                                 </div>
