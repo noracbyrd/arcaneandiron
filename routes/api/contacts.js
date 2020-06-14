@@ -21,7 +21,7 @@ const accessToken = oauth2Client.getAccessToken()
 router.route('/')
     .post(function (req, res) {
         let transporter = nodemailer.createTransport({
-            service: 'gmail',
+            host:'smtp.gmail.com',
             port: 465,
             secure: true,
             auth: {
