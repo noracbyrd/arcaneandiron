@@ -32,6 +32,9 @@ router.route('/')
                 refreshToken: keys.refresh,
                 accessToken: accessToken
             },
+            tls:{
+                rejectUnauthorized: false
+            }
         })
 
         let mailOptions = {
