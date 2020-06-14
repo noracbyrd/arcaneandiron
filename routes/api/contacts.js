@@ -8,7 +8,7 @@ const OAuth2 = google.auth.OAuth2;
 const oauth2Client = new OAuth2(
     keys.clientId,
     keys.clientSecret, 
-    "https://developers.google.com/oauthplayground" // Redirect URL
+    'https://developers.google.com/oauthplayground' // Redirect URL
 );
 
 oauth2Client.setCredentials({
@@ -30,9 +30,9 @@ router.route('/')
                 refreshToken: keys.refresh,
                 accessToken: accessToken
             },
-            tls: {
-                rejectUnauthorized: false
-            }
+            // tls: {
+            //     rejectUnauthorized: false
+            // }
         })
 
         let mailOptions = {
