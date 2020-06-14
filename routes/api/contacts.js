@@ -2,23 +2,33 @@ require('dotenv').config();
 const router = require('express').Router()
 const nodemailer = require('nodemailer')
 const keys = require('../../keys.js')
-const oauth2 = require('oauth2');
+const { google } = require('googleapis');
+const OAuth2 = google.auth.OAuth2;
+
+const oauth2Client = new OAuth2(
+    keys.clientId,
+    keys.clientSecret, 
+    "https://developers.google.com/oauthplayground" // Redirect URL
+);
+
+oauth2Client.setCredentials({
+    refresh_token: keys.refresh
+});
+const accessToken = oauth2Client.getAccessToken()
 
 
 // /api/contacts/
 router.route('/')
     .post(function (req, res) {
         let transporter = nodemailer.createTransport({
-            host: 'smtp.gmail.com',
-            port: 465,
-            secure: true,
+            service: 'gmail',
             auth: {
                 type: 'OAuth2',
                 user: keys.username,
                 clientId: keys.clientId,
                 clientSecret: keys.clientSecret,
                 refreshToken: keys.refresh,
-                accessToken: keys.accessToken
+                accessToken: accessToken
             },
             tls: {
                 rejectUnauthorized: false
