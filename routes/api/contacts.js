@@ -22,6 +22,8 @@ router.route('/')
     .post(function (req, res) {
         let transporter = nodemailer.createTransport({
             service: 'gmail',
+            port: 465,
+            secure: true,
             auth: {
                 type: 'OAuth2',
                 user: keys.username,
@@ -30,9 +32,6 @@ router.route('/')
                 refreshToken: keys.refresh,
                 accessToken: accessToken
             },
-            // tls: {
-            //     rejectUnauthorized: false
-            // }
         })
 
         let mailOptions = {
