@@ -30,7 +30,8 @@ router.route('/')
                 clientId: keys.clientId,
                 clientSecret: keys.clientSecret,
                 refreshToken: keys.refresh,
-                accessToken: accessToken
+                accessToken: accessToken,
+                expires: 1484314697598
             },
             tls:{
                 rejectUnauthorized: false
