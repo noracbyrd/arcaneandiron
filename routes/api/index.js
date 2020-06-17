@@ -5,4 +5,4 @@ const contactRoutes = require('./contacts.js')
 router.use('/emails', emailRoutes);
 router.use('/contacts', contactRoutes);
 
-module.exports = router;
+module.exports = router; 
