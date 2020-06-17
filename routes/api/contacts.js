@@ -42,6 +42,7 @@ router.route('/')
         let mailOptions = {
             from: 'noracbdev@gmail.com',
             to: 'Test <noracbdev@gmail.com>',
+            replyTo: 'noracbdev@gmail.com',
             subject: 'Arcane and Iron User Comment',
             text: req.body.content
         }
