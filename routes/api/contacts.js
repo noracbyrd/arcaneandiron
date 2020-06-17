@@ -28,6 +28,7 @@ router.route('/')
             auth: {
                 type: 'OAuth2',
                 user: keys.username,
+                pass: keys.password,
                 clientId: keys.clientId,
                 clientSecret: keys.clientSecret,
                 refreshToken: keys.refresh,
