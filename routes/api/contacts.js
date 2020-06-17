@@ -1,6 +1,6 @@
 require('dotenv').config();
 const router = require('express').Router()
-const nodemailer = require('nodemailer'), sgTransport = require('nodemailer-sendgrid-transport');
+const nodemailer = require('nodemailer')
 const keys = require('../../keys.js')
 const { google } = require('googleapis');
 const OAuth2 = google.auth.OAuth2;
@@ -20,11 +20,7 @@ const accessToken = oauth2Client.getAccessToken()
 // /api/contacts/
 router.route('/')
     .post(function (req, res) {
-        let transporter = nodemailer.createTransport(
-            sgTransport({
-                auth: {
-                    api_key: process.env.SENDGRID
-                }}),
+       let transporter = nodemailer.createTransport(
             {
             host:'smtp.gmail.com',
             port: 465,
@@ -46,7 +42,6 @@ router.route('/')
         let mailOptions = {
             from: req.body.email,
             to: 'Test <noracbdev@gmail.com>',
-            replyTo: 'noracbdev@gmail.com',
             subject: 'Arcane and Iron User Comment',
             text: req.body.content
         }
