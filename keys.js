@@ -4,5 +4,6 @@ module.exports = {
     clientId: process.env.CLIENTID,
     clientSecret: process.env.CLIENTSECRET,
     refresh: process.env.REFRESH,
-    access: process.env.ACCESS
+    access: process.env.ACCESS,
+    sendGrid: process.env.SENDGRID
   }
