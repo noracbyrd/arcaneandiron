@@ -23,7 +23,7 @@ router.route('/')
        let transporter = nodemailer.createTransport(
             {
             host:'smtp.gmail.com',
-            port: 587,
+            port: 465,
             secure: true,
             auth: {
                 type: 'OAuth2',
@@ -45,7 +45,13 @@ router.route('/')
             to: 'Test <noracbdev@gmail.com>',
             replyTo: 'noracbdev@gmail.com',
             subject: 'Arcane and Iron User Comment',
-            text: req.body.content
+            text: req.body.content,
+            auth: {
+                user: keys.username,
+                refreshToken: keys.refresh,
+                accessToken: accessToken,
+                expires: 1484314697598
+            }
         }
         transporter.sendMail(mailOptions, function (err, res) {
             if (err) {
