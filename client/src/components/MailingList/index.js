@@ -21,6 +21,15 @@ class MailingList extends Component {
         let newEmail = {
             email: this.state.email
         }
+        let newMailchimp = {
+            members: [
+                {
+                    email_address: this.state.email,
+                    // pending status is for double opt in - mailchimp will send a verification email
+                    status: 'pending'
+                }
+            ]
+        }
         API.newEmail(newEmail)
             .then(response => {
                 if (!response.data.errmsg) {
@@ -36,6 +45,7 @@ class MailingList extends Component {
         this.setState({
             email: ''
         })
+        // need to handle the Mailchimp API business API.newMailchimp(newMailchimp) or the like
     }
     render() {
         return (
@@ -62,7 +72,7 @@ class MailingList extends Component {
                     </div>
 
                 </div>
-                
+
             </div>
         )
     }
