@@ -22,18 +22,17 @@ class MailingList extends Component {
             email: this.state.email
         }
         let newMailchimp = {
-            members: [
-                {
-                    email_address: this.state.email,
-                    // pending status is for double opt in - mailchimp will send a verification email
-                    status: 'pending'
-                }
-            ]
+            email_address: this.state.email,
+            // pending status is for double opt in - mailchimp will send a verification email
+            status: 'pending'
         }
+ 
         API.newEmail(newEmail)
             .then(response => {
+                console.log(response)
                 if (!response.data.errmsg) {
                     console.log('Email added')
+                    API.newMailchimp(newMailchimp)
                 } else if (!response) {
                     console.log('something is wrong')
                 } else {
@@ -42,10 +41,10 @@ class MailingList extends Component {
             }).catch(error => {
                 console.log(error)
             })
-        this.setState({
-            email: ''
-        })
-        // need to handle the Mailchimp API business API.newMailchimp(newMailchimp) or the like
+        // this.setState({
+        //     email: ''
+        // })
+
     }
     render() {
         return (

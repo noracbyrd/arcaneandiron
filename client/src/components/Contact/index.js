@@ -22,13 +22,13 @@ class Contact extends Component {
             content: this.state.content
         }
         API.contact(newContactUs)
-        .then(response  => {
-            if (!response.data.errmsg) {
-                console.log('contact message sent')
-            } 
-        }).catch (error => {
-            console.log(error)
-        })
+            .then(response => {
+                if (!response.data.errmsg) {
+                    console.log('contact message sent')
+                }
+            }).catch(error => {
+                console.log(error)
+            })
         this.setState({
             name: '',
             email: '',
@@ -44,7 +44,7 @@ class Contact extends Component {
                         <div className='row'>
                             <div className='input-field col s6'>
                                 <input name='name'
-                                value={this.state.name} id='name' type='text' className='validate' onChange={this.handleInputChange}></input>
+                                    value={this.state.name} id='name' type='text' className='validate' onChange={this.handleInputChange}></input>
                                 <label htmlFor='name'>Name</label>
                             </div>
                         </div>
@@ -64,8 +64,8 @@ class Contact extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div> 
-                        <button class='btn grey lighten-1 waves-effect waves-light' type='submit' name='action' onClick={this.handleFormSubmit}>Submit
+                        <div>
+                            <button className='btn grey lighten-1 waves-effect waves-light' type='submit' name='action' onClick={this.handleFormSubmit}>Submit
   </button>
                         </div>
                     </form>

@@ -7,5 +7,8 @@ export default {
     },
     contact: function (contact) {
         return axios.post('/api/contacts', contact)
+    },
+    newMailchimp: function (mailchimp) {
+        return axios.post('/api/mailchimp', mailchimp)
     }
 }
