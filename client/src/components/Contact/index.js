@@ -39,6 +39,7 @@ class Contact extends Component {
         return (
             <div id='contact'>
                 <p>OMG ask us all the questionsssssss</p>
+                <div id='form'>
                 <div className='row'>
                     <form className='col s12'>
                         <div className='row'>
@@ -47,11 +48,10 @@ class Contact extends Component {
                                     value={this.state.name} id='name' type='text' className='validate' onChange={this.handleInputChange}></input>
                                 <label htmlFor='name'>Name</label>
                             </div>
-                        </div>
-                        <div className='row'>
-                            <div className='input-field col s12'>
+                            <div className='input-field col s6'>
                                 <input name='email' value={this.state.email} id='email' type='email' className='validate' onChange={this.handleInputChange}></input>
                                 <label htmlFor='email'>Email</label>
+                                <span class="helper-text" data-error="Please enter a valid email address."></span>
                             </div>
                         </div>
                         <div className='row'>
@@ -70,6 +70,7 @@ class Contact extends Component {
                         </div>
                     </form>
                 </div>
+            </div>
             </div>
         )
     }

@@ -45,7 +45,8 @@ router.route('/')
             to: 'Test <noracbdev@gmail.com>',
             replyTo: 'noracbdev@gmail.com',
             subject: 'Arcane and Iron User Comment',
-            text: req.body.content,
+            text: `Email from ${req.body.name} at ${req.body.email}: ${req.body.content}`,
+            html: `<p>From: ${req.body.name}</p><p>Email: ${req.body.email}</p><p>Message: ${req.body.content}</p>`,
             auth: {
                 user: keys.username,
                 refreshToken: keys.refresh,
