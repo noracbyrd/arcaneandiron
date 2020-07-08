@@ -1,12 +1,22 @@
 nav {
     border-top: solid 1px #000000;
+    /* border-bottom: solid 1px #000000; */
+}
+
+/* nav ul a {
     border-bottom: solid 1px #000000;
+} */
+
+nav ul a:hover {
+    font-family: 'Fondamento', cursive;
+    font-size: 1.25em;
 }
 
 #myNav {
     box-shadow: 0 0 0 0;
     color: #000000;
     float: none;
+    border-bottom: solid 1px #000000;
 }
 
 .navItem {

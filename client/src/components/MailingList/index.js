@@ -41,9 +41,9 @@ class MailingList extends Component {
             }).catch(error => {
                 console.log(error)
             })
-        // this.setState({
-        //     email: ''
-        // })
+        this.setState({
+            email: ''
+        })
 
     }
     render() {
