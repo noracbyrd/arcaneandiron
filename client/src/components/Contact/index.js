@@ -29,11 +29,11 @@ class Contact extends Component {
             }).catch(error => {
                 console.log(error)
             })
-        this.setState({
-            name: '',
-            email: '',
-            content: ''
-        })
+            this.setState({
+                name: '',
+                email: '',
+                content: ''
+            })
     }
     render() {
         return (
@@ -49,9 +49,9 @@ class Contact extends Component {
                                 <label htmlFor='name'>Name</label>
                             </div>
                             <div className='input-field col s6'>
-                                <input name='email' value={this.state.email} id='email' type='email' className='validate' onChange={this.handleInputChange}></input>
+                                <input name='email' value={this.state.email} id='email' type='email' className='validate' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" onChange={this.handleInputChange}></input>
                                 <label htmlFor='email'>Email</label>
-                                <span class="helper-text" data-error="Please enter a valid email address."></span>
+                                <span className="helper-text" data-error="Please enter a valid email address."></span>
                             </div>
                         </div>
                         <div className='row'>
