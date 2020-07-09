@@ -1,11 +1,14 @@
 import React from 'react'
 import './style.css'
+import ContentHeader from '../ContentHeader'
 
 function Playtest(props) {
     return (
         <div>
             <div className='row'></div>
-            <div className='row'></div>
+            <div className='row'>
+                <ContentHeader section='Request a Playtest' />
+            </div>
             <div className='row'></div>
             <div id='playtest'>
                 <p>Download the playtest info here wut wuuuuuut!</p>

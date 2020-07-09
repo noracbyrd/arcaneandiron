@@ -1,4 +1,5 @@
 import React from 'react'
+import ContentHeader from '../ContentHeader'
 
 function About(props) {
     return (
@@ -12,7 +13,9 @@ function About(props) {
             <div className='row'></div>
             <div className='row'></div>
             <div className='row'></div>
-            <div className='row'></div>
+            <div className='row'>
+                <ContentHeader section='About Arcade and Iron'/>
+            </div>
             <div className='row'></div>
             <div className='row'></div>
             <p>Arcane and Iron is a rad table top RPG! Super duper rad! It's awesome!</p>

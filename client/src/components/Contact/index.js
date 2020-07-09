@@ -38,7 +38,7 @@ class Contact extends Component {
     render() {
         return (
             <div id='contact'>
-                <p>OMG ask us all the questionsssssss</p>
+                <h6>Contact the Arcane and Iron Team</h6>
                 <div id='form'>
                 <div className='row'>
                     <form className='col s12'>
