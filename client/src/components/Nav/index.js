@@ -13,19 +13,6 @@ class Nav extends Component {
                             <a href='#' data-target='mobile-demo' className='sidenav-trigger'><i className='material-icons'>menu</i></a>
                             <div className='row'>
                                 <ul className='center hide-on-med-and-down'>
-                                    <div className='col s3'>
-                                        <li className='navItem' id='nav1'>
-                                            <Link
-                                                activeClass="active"
-                                                to="events"
-                                                spy={true}
-                                                smooth={true}
-                                                offset={-70}
-                                                duration={500}
-                                            >
-                                                Upcoming Events</Link>
-                                        </li>
-                                    </div>
                                     <div className='col s2'>
                                         <div className='row'>
                                             <div className='col s4'>
@@ -42,6 +29,19 @@ class Nav extends Component {
                                                 </li>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div className='col s3'>
+                                        <li className='navItem' id='nav1'>
+                                            <Link
+                                                activeClass="active"
+                                                to="events"
+                                                spy={true}
+                                                smooth={true}
+                                                offset={-70}
+                                                duration={500}
+                                            >
+                                                Upcoming Events</Link>
+                                        </li>
                                     </div>
                                     <div className='col s2'>
                                         <li className='navItem' id='nav3'>
