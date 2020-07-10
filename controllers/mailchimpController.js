@@ -9,10 +9,10 @@ const mailchimp = new Mailchimp(keys.mailchimpDev);
             path : `/lists/${keys.mailchimpDevList}/members`,
             body : req.body
           })
-          .then(info => {return res.json(info)})
+          .then(info => {res.json(info)})
           .catch(err => {
               console.log(err.status)
-              return err.status})
+              return res.json(err)})
     },
 };
 

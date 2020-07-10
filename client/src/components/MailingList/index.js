@@ -27,7 +27,21 @@ class MailingList extends Component {
             status: 'pending'
         }
         API.newMailchimp(newMailchimp)
-        .then(res => console.log(res))
+        .then(res => {
+            console.log(res.data.status)
+            switch(res.data.status){
+                case 'pending':
+                    API.newEmail(newEmail)
+                    .catch(err => console.log(err)) 
+                    break;
+                case 400:
+                    console.log('already joined')
+                    break;
+                default:
+                    console.log('something went wrong')    
+                    break;
+            }
+        })
         .catch((err) => {
             console.log(err)
         })
