@@ -1,3 +1,4 @@
+require('dotenv').config();
 const keys = require('../keys.js');
 const Mailchimp = require('mailchimp-api-v3')
 const mailchimp = new Mailchimp(keys.mailchimpDev);
