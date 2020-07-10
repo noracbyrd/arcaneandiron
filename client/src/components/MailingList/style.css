@@ -2,3 +2,26 @@
     font-family: 'Marko One', serif; 
     /* font-size: 1.5em; */
 }
+
+#modalHeader {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    border-top: none;
+    border-bottom: none;
+}
+
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #424242;
+    box-shadow: 0 1px 0 0 #424242;
+  }
+
+  #textarea1 {
+  border-bottom: 1px solid #424242;
+  }
+
+  #name {
+    border-bottom: 1px solid #424242;
+  }
+
+  #email {
+    border-bottom: 1px solid #424242;
+  }

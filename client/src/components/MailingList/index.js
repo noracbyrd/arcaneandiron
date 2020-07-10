@@ -26,24 +26,28 @@ class MailingList extends Component {
             // pending status is for double opt in - mailchimp will send a verification email
             status: 'pending'
         }
- 
-        API.newEmail(newEmail)
-            .then(response => {
-                console.log(response)
-                if (!response.data.errmsg) {
-                    console.log('Email added')
-                    API.newMailchimp(newMailchimp)
-                } else if (!response) {
-                    console.log('something is wrong')
-                } else {
-                    console.log('already signed up')
-                }
-            }).catch(error => {
-                console.log(error)
-            })
-        this.setState({
-            email: ''
+        API.newMailchimp(newMailchimp)
+        .then(res => console.log(res))
+        .catch((err) => {
+            console.log(err)
         })
+        // API.newEmail(newEmail)
+        //     .then(response => {
+        //         console.log(response)
+        //         if (!response.data.errmsg) {
+        //             console.log('Email added')
+        //             API.newMailchimp(newMailchimp)
+        //         } else if (!response) {
+        //             console.log('something is wrong')
+        //         } else {
+        //             console.log('already signed up')
+        //         }
+        //     }).catch(error => {
+        //         console.log(error)
+        //     })
+        // this.setState({
+        //     email: ''
+        // })
 
     }
     render() {
@@ -54,7 +58,7 @@ class MailingList extends Component {
                 <a data-target='mailingModal' className='btn modal-trigger waves-effect waves-light btn-large grey darken-2' id='mailingListBtn'>Join Our Mailing List</a>
                 <div id='mailingModal' className='modal'>
                     <div className='modal-content'>
-                        <h6>Sign up for our mailing list to get the latest Arcane & Iron news!</h6>
+                        <h6 id='modalHeader'>Sign up for our mailing list to get the latest Arcane & Iron news!</h6>
                         <div className='row'>
                             <form className='col s12'>
                                 <div className='row'>

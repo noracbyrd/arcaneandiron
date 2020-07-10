@@ -59,7 +59,7 @@ class Contact extends Component {
                                 <div className='row'>
                                     <div className='input-field col s12'>
                                         <textarea name='content' value={this.state.content} id='textarea1' className='materialize-textarea' onChange={this.handleInputChange}></textarea>
-                                        <label htmlFor='textarea1'>Textarea</label>
+                                        <label htmlFor='textarea1'>Message</label>
                                     </div>
                                 </div>
                             </div>
