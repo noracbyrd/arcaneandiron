@@ -31,9 +31,9 @@ app.use(routes)
 // rewrite
 // app.use(express.static('client/build'))
 // app.use('/api', api);
-// app.get('*', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
-// });
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+});
 
 db.sequelize.sync().then(function () {
     app.listen(PORT, function () {
