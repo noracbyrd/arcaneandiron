@@ -7,7 +7,7 @@ class Nav extends Component {
     render() {
         return (
             <div>
-                <nav className='transparent' id='myNav'>
+                <nav className='grey lighten-4' id='myNav'>
                     <div className='nav-wrapper'>
                         <div className='container'>
                             <a href='#' data-target='mobile-demo' className='sidenav-trigger'><i className='material-icons'>menu</i></a>
