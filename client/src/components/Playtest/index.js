@@ -7,7 +7,7 @@ function Playtest(props) {
         <div>
             <div className='row'></div>
             <div className='row'>
-                <ContentHeader section='Request a Playtest' />
+                <ContentHeader section='Request an Arcane and Iron Playtest' />
             </div>
             <div className='row'></div>
             <div id='playtest'>

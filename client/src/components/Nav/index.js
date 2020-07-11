@@ -7,6 +7,7 @@ class Nav extends Component {
     render() {
         return (
             <div>
+                <div className='navbar-fixed'>
                 <nav className='grey lighten-4' id='myNav'>
                     <div className='nav-wrapper'>
                         <div className='container'>
@@ -73,6 +74,7 @@ class Nav extends Component {
                         </div>
                     </div>
                 </nav>
+                </div>
                 <ul className='sidenav' id='mobile-demo'>
                     <li className='navMobile'>
                         <Link

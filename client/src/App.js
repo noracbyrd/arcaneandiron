@@ -12,9 +12,9 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <div class="navbar-fixed">
+      {/* <div class="navbar-fixed"> */}
             <Nav />
-            </div>
+            {/* </div> */}
       <div className='container'>
       <div className='row'></div>
       <div className='row'></div>
