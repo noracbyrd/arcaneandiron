@@ -11,8 +11,8 @@ function Playtest(props) {
             </div>
             <div className='row'></div>
             <div id='playtest'>
-                <p>Download the playtest info here wut wuuuuuut!</p>
-                <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah </p>
+                <p>Coming soon: a download of the playtest files!</p>
+                <p></p>
             </div>
             <div className='row'></div>
             <div className='row'></div>
